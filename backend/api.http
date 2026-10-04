@@ -1,0 +1,59 @@
+POST http://localhost:9080/register
+Content-Type: application/json
+
+{
+  "username": "gurvinder",
+  "password": "12345",
+  "email": "gurvinder@test.com",
+  "name": "Gurvinder"
+}
+
+
+###
+POST http://localhost:9080/login
+Content-Type: application/json
+
+{
+   "email": "gurvinder@test.com",
+  "password": "12345"
+  
+}
+
+###
+POST http://localhost:9080/get_user_and_profile
+Content-Type: application/json
+
+{
+   "token":  "9fed4eaf6c33951099ab942f9d37c1af829034ba9ae5732a701212751734ec87"
+  
+}
+
+###
+POST http://localhost:9080/update_profile_data
+Content-Type: application/json
+
+{
+  "token": "9fed4eaf6c33951099ab942f9d37c1af829034ba9ae5732a701212751734ec87",
+  "bio": "Software Developer",
+  "currentPost": "CTO",
+  "postWork": [
+    {
+      "company": "Microsoft",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education": [
+    {
+      "school": "St Mary's School",
+      "degree": "B.Tech",
+      "fieldStudy": "2015-2019"
+    }
+  ]
+}
+
+
+###
+GET http://localhost:9080/user/get_all_users
+
+
