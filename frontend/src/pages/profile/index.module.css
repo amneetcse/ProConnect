@@ -1,0 +1,615 @@
+.container {
+  padding: 1.3rem;
+  background: rgb(255, 253, 253);
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   MAIN DISCOVER LAYOUT
+===================================================== */
+
+.discoverLayout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 180px minmax(500px, 1fr) 220px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+
+/* =====================================================
+   LEFT SIDEBAR
+===================================================== */
+
+.leftSidebar {
+  padding: 0.5rem 0.3rem;
+  position: sticky;
+  top: 20px;
+}
+
+.leftSidebar h3 {
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.65rem 0.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background: #f1f1f1;
+}
+
+.sidebarIcon {
+  width: 20px;
+  font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   CENTER PROFILE SECTION
+===================================================== */
+
+.profileSection {
+  width: 100%;
+}
+
+.profileCard {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: visible;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   COVER / BACKDROP
+===================================================== */
+
+.backDropContainer {
+  width: 100%;
+  height: 190px;
+
+  background-image: url("/profile-bg.jpg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  border-radius: 12px 12px 0 0;
+}
+
+
+/*
+   IMPORTANT:
+   The image inside this container is the PROFILE
+   PICTURE, not the cover image.
+*/
+
+.backDropContainer img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: 30px;
+  bottom: -45px;
+
+  border: 4px solid white;
+
+  background: white;
+
+  z-index: 5;
+}
+
+
+/* =====================================================
+   PROFILE DETAILS
+===================================================== */
+
+.profileContainer_details {
+  padding: 3.8rem 1.2rem 1.2rem 1.2rem;
+}
+
+.profileHeader {
+  width: 100%;
+}
+
+.profileInfo {
+  width: 100%;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.nameRow h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.nameRow p {
+  margin: 0;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.connectBtn {
+  padding: 0.4rem 1rem;
+  background: rgba(3, 3, 247, 0.945);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.connectBtn:hover {
+  background: #0000cc;
+}
+
+.connectedButton {
+  padding: 0.4rem 1rem;
+  border: 1px solid silver;
+  outline: none;
+  color: rgba(3, 3, 219);
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.resumeBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.35rem 0.7rem;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #555;
+
+  font-size: 0.85rem;
+}
+
+.resumeBtn:hover {
+  color: #000;
+}
+
+.resumeBtn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+
+/* =====================================================
+   BIO
+===================================================== */
+
+.bio {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  color: #444;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   RECENT ACTIVITY
+===================================================== */
+
+.recentActivity {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eeeeee;
+}
+
+.recentActivity h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.noPosts {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   POST CARD
+===================================================== */
+
+.postCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.postCard img {
+  width: 70px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.postCard p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   OLD CARD SUPPORT
+===================================================== */
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card_profileContent {
+  display: flex;
+}
+
+.card_profileContent img {
+  width: 3.4rem;
+  height: 3.4rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* .backDrop{
+   width: 3.4rem;
+  height: 3.4rem;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+} */
+
+/* .backDrop::after{
+  content: "Edit";
+  position: absolute;
+  top: 0;
+  
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 50%;
+  bottom: -20px;
+  left: 8%;
+  z-index: 3;
+} */
+
+.backDrop__overlay{
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30%;
+  left: 8%;
+  text-align: center;
+  z-index: 4;
+  transition: all 0.4s;
+  cursor: pointer;
+  color: white;
+  opacity: 0.0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backDrop__overlay:hover{
+   background: black;
+    opacity: 0.8;
+}
+.card p {
+  margin: 0;
+}
+
+
+/* =====================================================
+   WORK HISTORY
+===================================================== */
+
+.workHistory {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eeeeee;
+}
+
+.workHistory h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.workHistoryContainer {
+  display: flex;
+  gap: 1rem;
+
+  padding-top: 1rem;
+
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+.workHistoryCard {
+  min-width: 150px;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 8px;
+
+  background: white;
+
+  border: 1px solid #eeeeee;
+
+  box-shadow: 3px 4px 10px rgba(173, 173, 173, 0.3);
+}
+
+.companyPosition {
+  margin: 0;
+
+  font-weight: bold;
+
+  font-size: 0.82rem;
+}
+
+.workYears {
+  margin: 0.4rem 0 0 0;
+
+  color: #777;
+
+  font-size: 0.75rem;
+}
+
+.noWork {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   RIGHT SIDEBAR
+===================================================== */
+
+.rightSidebar {
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 20px;
+}
+
+.rightSidebar h3 {
+  margin: 0 0 1rem 0;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   TOP PROFILES
+===================================================== */
+
+.topProfiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.topProfileCard {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 0.5rem;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.topProfileCard:hover {
+  background: #f5f5f5;
+}
+
+.topProfileCard img {
+  width: 42px;
+  height: 42px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 1px solid #ddd;
+}
+
+.topProfileInfo {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.topProfileInfo strong {
+  font-size: 0.8rem;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.topProfileInfo span {
+  font-size: 0.7rem;
+
+  color: #777;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+  .discoverLayout {
+    grid-template-columns: 150px minmax(400px, 1fr);
+  }
+
+  .rightSidebar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .discoverLayout {
+    display: block;
+  }
+
+  .leftSidebar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    position: static;
+
+    margin-bottom: 1rem;
+  }
+
+  .leftSidebar h3 {
+    display: none;
+  }
+
+  .sidebarItem {
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .sidebarItem span:last-child {
+    font-size: 0.75rem;
+  }
+
+  .profileContainer_details {
+    padding: 3.5rem 1rem 1rem 1rem;
+  }
+
+  .backDropContainer {
+    height: 160px;
+  }
+
+  .backDropContainer img {
+    width: 80px;
+    height: 80px;
+
+    left: 20px;
+    bottom: -40px;
+  }
+}
+
+.profileContainer_details input{
+   outline: none;
+   border-style: none;
+   padding-inline: 10px;
+   padding-block: 9px;
+   width: fit-content;
+}
+
+.nameEdit{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.updateProfileBtn {
+  padding: 0.4rem 1rem;
+  background: rgba(3, 3, 247, 0.945);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.profileContainer_details textarea{
+  outline: none;
+  border: none;
+  padding-inline: 10px;
+  padding-block: 9px;
+  font-family: "Poppins" !important;
+  font-size: 1rem;
+}
+
+.addWorkButton{
+  padding-inline: 1.3rem;
+  background: white;
+  border: 1px dotted silver;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-block: 1.2rem;
+}

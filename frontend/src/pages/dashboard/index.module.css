@@ -1,0 +1,720 @@
+/* =========================================
+   MAIN SCROLL AREA
+========================================= */
+
+.scrollComponent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.wrapper {
+    width: 100%;
+    max-width: 560px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CREATE POST
+========================================= */
+
+.createPostContainer {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: rgb(252, 243, 243);
+
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 5px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   CREATE POST PROFILE
+========================================= */
+
+.createPostProfile {
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   TEXT AREA
+========================================= */
+
+.textArea {
+    flex: 1;
+
+    width: 100%;
+    height: 45px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 25px;
+
+    background: white;
+
+    outline: none;
+
+    resize: none;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #333;
+}
+
+.textArea::placeholder {
+    color: #888;
+}
+
+.textArea:focus {
+    border-color: #0a66c2;
+}
+
+
+/* =========================================
+   PLUS BUTTON
+========================================= */
+
+.Fab {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+    min-height: 38px;
+
+    border-radius: 50%;
+
+    background: rgb(0, 59, 130);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.Fab > svg {
+    width: 21px;
+    height: 21px;
+
+    color: white;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.uploadButton {
+    position: absolute;
+
+    right: 15px;
+    bottom: -42px;
+
+    padding: 7px 17px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: rgb(2, 93, 158);
+
+    color: white;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   POSTS CONTAINER
+========================================= */
+
+.postsContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SINGLE POST
+========================================= */
+
+.singleCard {
+    width: 100%;
+
+    padding: 14px 8px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    /* LINE AFTER EVERY POST */
+    border-bottom: 1px solid #dedede;
+}
+
+
+/* =========================================
+   PROFILE ROW
+========================================= */
+
+.singleCard_profileContainer {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.userProfile {
+    width: 52px !important;
+    height: 52px !important;
+
+    min-width: 52px !important;
+    min-height: 52px !important;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PROFILE + POST CONTENT
+========================================= */
+
+/*
+   This targets the SECOND div inside
+   .singleCard_profileContainer
+*/
+
+.singleCard_profileContainer > div {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   NAME + DELETE ROW
+========================================= */
+
+.singleCard_profileContainer > div > div:first-child {
+    width: 100%;
+
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.singleCard_profileContainer > div > div:first-child p {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #222;
+
+    line-height: 18px;
+}
+
+
+/* =========================================
+   DELETE ICON
+========================================= */
+
+.singleCard_profileContainer svg {
+    width: 20px;
+    height: 20px;
+
+    color: #d9534f !important;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   USERNAME
+========================================= */
+
+.singleCard_profileContainer > div > p {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    color: #777;
+
+    line-height: 16px;
+}
+
+
+/* =========================================
+   POST BODY
+========================================= */
+
+.singleCard_profileContainer > div > p[style] {
+    margin-top: 15px;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+
+    color: #333;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   POST IMAGE CONTAINER
+========================================= */
+
+.singleCard_image {
+    width: 100%;
+
+    max-width: 390px;
+
+    margin-top: 5px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   POST IMAGE
+========================================= */
+
+.singleCard_image img {
+    width: 100%;
+
+    max-width: 390px;
+
+    max-height: 360px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   NORMAL POST PROFILE
+========================================= */
+
+.postProfile {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+    min-height: 52px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.singleCard:hover {
+    background: #fdfdfd;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        width: 94%;
+        max-width: 560px;
+    }
+
+    .createPostContainer {
+        padding: 10px;
+
+        gap: 9px;
+    }
+
+    .createPostProfile {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    .textArea {
+        height: 42px;
+
+        padding: 11px 14px;
+
+        font-size: 12px;
+    }
+
+    .Fab {
+        width: 35px;
+        height: 35px;
+
+        min-width: 35px;
+        min-height: 35px;
+    }
+
+    .Fab > svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .userProfile,
+    .postProfile {
+        width: 46px !important;
+        height: 46px !important;
+
+        min-width: 46px !important;
+        min-height: 46px !important;
+    }
+
+    .singleCard_image {
+        max-width: 100%;
+    }
+
+    .singleCard_image img {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .wrapper {
+        width: 96%;
+    }
+
+    .createPostContainer {
+        padding: 8px;
+
+        gap: 7px;
+    }
+
+    .createPostProfile {
+        width: 40px !important;
+        height: 40px !important;
+
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+
+    .textArea {
+        font-size: 11px;
+
+        padding: 10px 12px;
+    }
+
+    .Fab {
+        width: 32px;
+        height: 32px;
+
+        min-width: 32px;
+        min-height: 32px;
+    }
+
+    .userProfile,
+    .postProfile {
+        width: 43px !important;
+        height: 43px !important;
+
+        min-width: 43px !important;
+        min-height: 43px !important;
+    }
+
+    .singleCard {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .singleCard_profileContainer {
+        gap: 10px;
+    }
+}
+
+.deleteButton {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+    background: transparent;
+
+    padding: 4px;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9a9a9a;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+}
+
+.deleteButton svg {
+    width: 18px;
+    height: 18px;
+}
+
+.deleteButton:hover {
+    color: #e53935;
+    background: #fff5f5;
+}
+
+.deleteButton:active {
+    transform: scale(0.9);
+}
+
+
+.optionsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-top: 1px solid #e5e5e5;
+    margin-top: 8px;
+    padding: 8px 0;
+}
+
+.singleOption_optionsContainer {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    padding: 7px 0;
+    border-radius: 6px;
+
+    transition: 0.2s ease;
+}
+
+/* Icons */
+.singleOption_optionsContainer svg {
+    width: 19px;
+    height: 19px;
+    stroke: #000000;
+}
+
+/* Like count */
+.singleOption_optionsContainer p {
+    margin: 0;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Hover */
+.singleOption_optionsContainer:hover {
+    background-color: #f2f2f2;
+}
+
+/* Click */
+.singleOption_optionsContainer:active {
+    transform: scale(0.96);
+}
+
+.commentSection {
+    width: 100%;
+    padding: 10px 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+.commentInputContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.commentInput {
+    flex: 1;
+    height: 38px;
+    border: 1px solid #d5d5d5;
+    border-radius: 20px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 13px;
+}
+
+.commentInput:focus {
+    border-color: #000000;
+}
+
+.commentButton {
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 18px;
+    background: #000000;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.commentButton:hover {
+    background: #333333;
+}
+
+.commentsList {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.commentItem {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.commentUser {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.commentText {
+  font-size: 15px;
+  color: #333;
+}
+
+.noComments {
+  color: #888;
+  font-size: 14px;
+}
