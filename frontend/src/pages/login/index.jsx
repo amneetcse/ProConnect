@@ -106,8 +106,7 @@ function LoginComponent() {
 
           <div className={styles.cardContainer_right}>
             {userLoginMethod ? (
-              <p>Don't Have an Account?</p>
-            ) : (
+<p>Don&apos;t Have an Account?</p>            ) : (
               <p>Already Have an Account?</p>
             )}
             <div
