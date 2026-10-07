@@ -17,7 +17,7 @@ import DashboardLayout from "@/layout/DashboardLayout/index.jsx";
 
 import styles from "./index.module.css";
 
-const BASE_URL = "http://localhost:9080";
+const BASE_URL = "https://proconnect-uqo5.onrender.com";
 
 export default function Dashboard() {
   const dispatch = useDispatch();
